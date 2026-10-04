@@ -1,0 +1,8 @@
+Options -Indexes
+
+RewriteEngine On
+RewriteRule (^|/)\.git(/|$) - [F,L]
+
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>
